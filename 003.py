@@ -4,8 +4,6 @@
 
 import math
 
-# TODO sieve of eristotheles
-
 def get_primes(number):	
 	while True:
 		if is_prime(number):
