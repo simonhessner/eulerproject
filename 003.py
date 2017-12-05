@@ -2,6 +2,10 @@
 
 # https://projecteuler.net/problem=3
 
+import math
+
+# TODO sieve of eristotheles
+
 def get_primes(number):	
 	while True:
 		if is_prime(number):
@@ -11,7 +15,9 @@ def get_primes(number):
 def is_prime(number):
 	if number == 1:
 		return False
-	for div in range(2, number):		
+	if number == 2:
+		return True
+	for div in range(3, int(math.sqrt(number)+1), 2):		
 		if number % div == 0:
 			return False
 	return True
