@@ -11,11 +11,11 @@ def primes(number):
 		number += 1
 
 def is_prime(number):
-	if number == 1:
-		return False
 	if number == 2:
 		return True
-	for div in range(3, int(math.sqrt(number)+1), 2):		
+	if number == 1 or number % 2 == 0:
+		return False	
+	for div in range(3, int(math.sqrt(number)+1), 2): #skip even divisors
 		if number % div == 0:
 			return False
 	return True

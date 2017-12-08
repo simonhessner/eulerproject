@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+# https://projecteuler.net/problem=6
+
 def diff_of_sums(start,end):
 	sum_of_squares = sum([x**2 for x in range(start, end+1)])
 	square_of_sum  = sum(range(start,end+1))**2
