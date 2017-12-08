@@ -4,7 +4,7 @@
 
 import math
 
-def get_primes(number):	
+def primes(number):	
 	while True:
 		if is_prime(number):
 			yield number
@@ -28,7 +28,7 @@ def get_prime_factors(n):
 		if n % prime == 0: # if n is divisable by the current prime, the prime is a prime factor of the number			
 			n //= prime # divide by the prime to check for further prime factors
 			factors.append(prime)		
-		prime = next(get_primes(prime+1))	
+		prime = next(primes(prime+1))	
 
 	return factors
 
